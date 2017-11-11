@@ -1,0 +1,192 @@
+@import "mixins";
+@import "../bourbon/bourbon";
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+    background-color: #d7d0d0;
+}
+
+.before{
+  transform: scale(0.8);
+}
+
+.dotActive{
+  background-color: red;
+}
+.dotInactive{
+  background-color: white;
+}
+
+#controll{
+  position: absolute;
+  right: 10px;
+  @include centerh;
+  z-index: 99;
+
+  .controllDot{
+    border-radius: 100%;
+    position: relative;
+    opacity: 1;
+    margin: 10px;
+    width: 12px;
+    height: 12px;
+    box-shadow: 0px 0px 10px black;
+    cursor: pointer;
+  }
+}
+
+
+
+.active{
+
+  .right{
+      transform: translate(100%);
+      transition: transform 0.6s ease-in-out;
+  }
+
+  .left{
+      transform: translate(0%);
+      transition: transform 0.6s ease-in-out;
+  }
+}
+
+.inactive{
+  .right{
+      transform: translate(200%);
+      transition: transform 0.6s ease-in-out;
+  }
+
+  .left{
+      transform: translate(-100%);
+      transition: transform 0.6s ease-in-out;
+  }
+}
+
+.holder{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: absolute;
+    top:0;
+    transition: transform 0.6s ease-in-out;
+
+    .half{
+        height: 100%;
+        width: 50%;
+        position: absolute;
+        top:0;
+    }
+
+    .textSide{
+        background-color:#e8e1e1;
+        position: absolute;
+
+        .textHolder{
+            width: 90%;
+            padding: 0 5% 0 5%;
+            text-align: center;
+            position: relative;
+            @include centerh;
+
+            .logo{
+              height: 100px;
+            }
+
+            h1{
+                font-size: 50px;
+            }
+            p{
+                font-size: 30px;
+            }
+        }
+    }
+
+    .imgSide{
+        background: #fff;
+        position: absolute;
+        overflow: hidden;
+
+        img{
+            min-width: 100%;
+            min-height: 100%;
+            position: absolute;
+            @include center;
+            height: auto;
+            width: auto;
+        }
+    }
+
+}
+
+#first{
+
+
+    video{
+        position: absolute;
+        min-height: 100vh;
+        min-width: 100vw;
+        height: auto;
+        width: auto;
+        @include center;
+        z-index: 1;
+    }
+
+    #firstHolder{
+        position: absolute;
+        @include center;
+        z-index: 2;
+        display: flex;
+        height: 300px;
+
+        img{
+            height: 300px;
+            position: relative;
+        }
+
+        #firstTxtHolder{
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            margin-left: 20px;
+            color: white;
+            text-shadow: 0px 0px 10px black;
+            font-weight: 300;
+            text-align: center;
+            //height: 300px;
+            h1{
+                font-size: 70px;
+                //max-height: 150px;
+            }
+            h2{
+                font-size: 55px;
+                //max-height: 150px;
+            }
+        }
+    }
+}
+
+#second{
+    z-index: 3;
+}
+
+#third{
+    z-index: 4;
+}
+
+#fourth{
+    z-index: 5;
+}
+#fifth{
+    z-index: 6;
+
+}
+#sixth{
+    z-index: 7;
+
+}

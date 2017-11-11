@@ -1,0 +1,45 @@
+@mixin center(){
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin centerh(){
+    top: 50%;
+    transform: translatey(-50%);
+}
+
+@mixin centerw(){
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+@mixin kontakthide(){
+    @include keyframes(khide){
+        from{
+            font-size: 20px;
+            height: 80px;
+            left: 50px;
+        }
+        to{
+            font-size: 16px;
+            height: 50px;
+            left: -170px;
+        }
+    }
+}
+
+@mixin kontaktshow(){
+    @include keyframes(kshow){
+        from{
+            font-size: 16px;
+            height: 50px;
+            left: -170px;
+        }
+        to{
+            font-size: 20px;
+            height: 80px;
+            left: 50px;
+        }
+    }
+}
