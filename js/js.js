@@ -173,12 +173,16 @@ function start(){ //Start settings
   }
     
   function showMAdnotation(elem){
-      var dot = ".dotContainer:nth-of-type(" + elem + ") p";
-      document.querySelector(dot).style = "height: 32px; width: 200px;";
+      var p = ".dotContainer:nth-of-type(" + elem + ") p";
+      var dot = ".dotContainer:nth-of-type(" + elem + ") .controllDot";
+      document.querySelector(p).style = "height: 32px; width: 200px;";
+      document.querySelector(dot).style = "background-color:gray;";
   } 
   function hideMAdnotation(elem){
-      var dot = ".dotContainer:nth-of-type(" + elem + ") p";
-      document.querySelector(dot).style = "height: 0px; width: 0px;";
+      var dot = ".dotContainer:nth-of-type(" + elem + ") .controllDot";
+      var p = ".dotContainer:nth-of-type(" + elem + ") p";
+      document.querySelector(p).style = "height: 0px; width: 0px;";
+      document.querySelector(dot).style = "background-color:white;";
   }    
     
   function buttonMenu(nr){

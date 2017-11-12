@@ -48,15 +48,15 @@ body{
             float: right;
             transition: background-color 0.4s;
         }
-        .controllDot:hover{
+        /*.controllDot:hover{
             background-color: gray;
-        }
+        }*/
         
         p{
             position: relative;
             width: 0px;
             height: 0px;
-            font-size: 15px;
+            font-size: 17px;
             line-height: 32px;
             float: right;
             transition:height 0.4s;
