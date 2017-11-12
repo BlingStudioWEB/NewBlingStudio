@@ -97,6 +97,7 @@ body{
 
             .logo{
               height: 100px;
+              margin-top: 30px;
             }
 
             h1{
@@ -234,14 +235,16 @@ body{
         float: left;
         position: relative;
         width: 33.3333%;
+        margin-top: 30px;
          img{
-             height: 300px;
-             margin-top: 30px;
+             height: 100px;
+             margin-top: 20px;
+            
         }
         p{
             width: 100%;
-            margin-top: 20px;
-            
+            height: 20%;
+            font-size: 15px;
         }
        
        }
