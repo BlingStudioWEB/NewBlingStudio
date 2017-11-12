@@ -174,13 +174,11 @@ function start(){ //Start settings
     
   function showMAdnotation(elem){
       var dot = ".dotContainer:nth-of-type(" + elem + ") p";
-      console.log(elem);
-      document.querySelector(dot).style = "height: 32px; width: auto;";
+      document.querySelector(dot).style = "height: 32px; width: 150px;";
   } 
   function hideMAdnotation(elem){
       var dot = ".dotContainer:nth-of-type(" + elem + ") p";
-      console.log(elem);
-      document.querySelector(dot).style = "height: 0; width: 0;";
+      document.querySelector(dot).style = "height: 0px; width: 0px;";
   }    
     
   function buttonMenu(nr){
