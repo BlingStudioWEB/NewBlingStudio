@@ -218,35 +218,35 @@ body{
 
 #fourth{
     z-index: 5;
-<<<<<<< HEAD
-  #iconsgrid{
-            width: 95%;
-            margin-left: 2,5%;
-            margin-right: 2,5%;      
-=======
+
+
+
    #iconsGrid{
        position: relative;
        width: 95% ;
        margin-left: 2.5%;
-       margin-right: 2.5%;      
->>>>>>> 3bae0454955b8c01fdd8e319d7730bbd8647e1b5
-    
+       margin-right: 2.5%;  
+       height: 10px;
+       
+
+      
     .icon{
         float: left;
         position: relative;
         width: 33.3333%;
-        .img{
-            width: 30px;
-            
+         img{
+             height: 300px;
+             margin-top: 30px;
         }
         p{
-            width: 100%
+            width: 100%;
+            margin-top: 20px;
+            
         }
-    }
-    
-}
+       
+       }
+      }
 
-    
 }
 #fifth{
     z-index: 6;
