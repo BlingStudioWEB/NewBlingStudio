@@ -34,6 +34,7 @@ body{
         height: 32px;
         width: auto;
         
+        
         .controllDot{
             border-radius: 100%;
             position: relative;
@@ -45,19 +46,27 @@ body{
             cursor: pointer;
             position: relative;
             float: right;
+            transition: background-color 0.4s;
+        }
+        .controllDot:hover{
+            background-color: gray;
         }
         
         p{
             position: relative;
             width: 0px;
-            height: 0;
-            font-size: 13px;
+            height: 0px;
+            font-size: 15px;
             line-height: 32px;
             float: right;
-            transition: height 0.3s;
-            overflow-y: hidden;
+            transition:height 0.4s;
+            transition-timing-function: ease-in-out;
+            overflow: hidden;
             text-align: right;
+            color: white;
             text-shadow: 0px 0px 10px black;
+
+
         }
     }
 }

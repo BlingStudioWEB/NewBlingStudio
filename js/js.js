@@ -174,7 +174,7 @@ function start(){ //Start settings
     
   function showMAdnotation(elem){
       var dot = ".dotContainer:nth-of-type(" + elem + ") p";
-      document.querySelector(dot).style = "height: 32px; width: 150px;";
+      document.querySelector(dot).style = "height: 32px; width: 200px;";
   } 
   function hideMAdnotation(elem){
       var dot = ".dotContainer:nth-of-type(" + elem + ") p";
