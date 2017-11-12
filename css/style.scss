@@ -181,16 +181,14 @@ body{
 
 #fourth{
     z-index: 5;
-.icon {
-    img{
-     width: 80px;
-     margin-right: 600px;
-     margin-left: 10px;
-
-    
-    
+    .icon{
+        width: 10px;
+        img{
+            float: left;
+            width: 87px;
+        }
     }
-}
+
 
     
 }
