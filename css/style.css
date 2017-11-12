@@ -1,2 +1,141 @@
-*{margin:0;padding:0}body{overflow:hidden;font-family:'Roboto', sans-serif;background-color:#d7d0d0}.before{transform:scale(0.8)}.dotActive{background-color:red}.dotInactive{background-color:white}#controll{position:absolute;right:10px;top:50%;transform:translatey(-50%);z-index:99}#controll .controllDot{border-radius:100%;position:relative;opacity:1;margin:10px;width:12px;height:12px;box-shadow:0px 0px 10px black;cursor:pointer}.active .right{transform:translate(100%);transition:transform 0.6s ease-in-out}.active .left{transform:translate(0%);transition:transform 0.6s ease-in-out}.inactive .right{transform:translate(200%);transition:transform 0.6s ease-in-out}.inactive .left{transform:translate(-100%);transition:transform 0.6s ease-in-out}.holder{height:100vh;width:100vw;overflow:hidden;position:absolute;top:0;transition:transform 0.6s ease-in-out}.holder .half{height:100%;width:50%;position:absolute;top:0}.holder .textSide{background-color:#e8e1e1;position:absolute}.holder .textSide .textHolder{width:90%;padding:0 5% 0 5%;text-align:center;position:relative;top:50%;transform:translatey(-50%)}.holder .textSide .textHolder .logo{height:100px}.holder .textSide .textHolder h1{font-size:50px}.holder .textSide .textHolder p{font-size:30px}.holder .imgSide{background:#fff;position:absolute;overflow:hidden}.holder .imgSide img{min-width:100%;min-height:100%;position:absolute;left:50%;top:50%;transform:translate(-50%, -50%);height:auto;width:auto}#first video{position:absolute;min-height:100vh;min-width:100vw;height:auto;width:auto;left:50%;top:50%;transform:translate(-50%, -50%);z-index:1}#first #firstHolder{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%);z-index:2;display:flex;height:300px}#first #firstHolder img{height:300px;position:relative}#first #firstHolder #firstTxtHolder{display:flex;position:relative;flex-direction:column;margin-left:20px;color:white;text-shadow:0px 0px 10px black;font-weight:300;text-align:center}#first #firstHolder #firstTxtHolder h1{font-size:70px}#first #firstHolder #firstTxtHolder h2{font-size:55px}#second{z-index:3}#third{z-index:4}#fourth{z-index:5}#fifth{z-index:6}#sixth{z-index:7}
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+  background-color: #d7d0d0; }
+
+.before {
+  transform: scale(0.8); }
+
+.dotActive {
+  background-color: red; }
+
+.dotInactive {
+  background-color: white; }
+
+#controll {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translatey(-50%);
+  z-index: 99; }
+  #controll .controllDot {
+    border-radius: 100%;
+    position: relative;
+    opacity: 1;
+    margin: 10px;
+    width: 12px;
+    height: 12px;
+    box-shadow: 0px 0px 10px black;
+    cursor: pointer; }
+
+.active .right {
+  transform: translate(100%);
+  transition: transform 0.6s ease-in-out; }
+.active .left {
+  transform: translate(0%);
+  transition: transform 0.6s ease-in-out; }
+
+.inactive .right {
+  transform: translate(200%);
+  transition: transform 0.6s ease-in-out; }
+.inactive .left {
+  transform: translate(-100%);
+  transition: transform 0.6s ease-in-out; }
+
+.holder {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  transition: transform 0.6s ease-in-out; }
+  .holder .half {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    top: 0; }
+  .holder .textSide {
+    background-color: #e8e1e1;
+    position: absolute; }
+    .holder .textSide .textHolder {
+      width: 90%;
+      padding: 0 5% 0 5%;
+      text-align: center;
+      position: relative;
+      top: 50%;
+      transform: translatey(-50%); }
+      .holder .textSide .textHolder .logo {
+        height: 100px; }
+      .holder .textSide .textHolder h1 {
+        font-size: 50px; }
+      .holder .textSide .textHolder p {
+        font-size: 30px; }
+  .holder .imgSide {
+    background: #fff;
+    position: absolute;
+    overflow: hidden; }
+    .holder .imgSide img {
+      min-width: 100%;
+      min-height: 100%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      height: auto;
+      width: auto; }
+
+#first video {
+  position: absolute;
+  min-height: 100vh;
+  min-width: 100vw;
+  height: auto;
+  width: auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1; }
+#first #firstHolder {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  display: flex;
+  height: 300px; }
+  #first #firstHolder img {
+    height: 300px;
+    position: relative; }
+  #first #firstHolder #firstTxtHolder {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin-left: 20px;
+    color: white;
+    text-shadow: 0px 0px 10px black;
+    font-weight: 300;
+    text-align: center; }
+    #first #firstHolder #firstTxtHolder h1 {
+      font-size: 70px; }
+    #first #firstHolder #firstTxtHolder h2 {
+      font-size: 55px; }
+
+#second {
+  z-index: 3; }
+
+#third {
+  z-index: 4; }
+
+#fourth {
+  z-index: 5; }
+
+#fifth {
+  z-index: 6; }
+
+#sixth {
+  z-index: 7; }
+
 /*# sourceMappingURL=style.css.map */

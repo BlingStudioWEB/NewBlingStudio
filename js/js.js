@@ -1,5 +1,6 @@
 window.onload = startUp();
 window.onload = start();
+var activePage = 2;
 
 function startUp(){
   var elems = document.querySelectorAll('.holder');
@@ -27,7 +28,6 @@ function startUp(){
 
 function start(){ //Start settings
 
-  var activePage = 2;
   var isAnimating = false;
 
   function scroll(dir) {
@@ -146,8 +146,7 @@ function start(){ //Start settings
 
     return false;
   }
-
-
+    
   function buttonMenu(nr){
 
     var pages = nr - activePage;
