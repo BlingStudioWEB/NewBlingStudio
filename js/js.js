@@ -77,7 +77,7 @@ function start(){ //Start settings
 
   function nextDot(pg){
     var aPage = pg-1;
-    var dot ='#controll .controllDot:nth-of-type('+ aPage + ')';
+    var dot ='#controll .dotContainer:nth-of-type('+ aPage + ') .controllDot';
     var item = document.querySelector(dot);
     item.classList.add('dotActive');
     item.classList.remove('dotInactive');
@@ -87,7 +87,7 @@ function start(){ //Start settings
 
   function prevDot(pg){
     var aPage = pg-1;
-    var dot ='#controll .controllDot:nth-of-type('+ aPage + ')';
+    var dot ='#controll .dotContainer:nth-of-type('+ aPage + ') .controllDot';
     var item = document.querySelector(dot);
     item.classList.remove('dotActive');
     item.classList.add('dotInactive');
@@ -146,7 +146,7 @@ function start(){ //Start settings
     return false;
   }
   
-  var controllDots = document.querySelectorAll(".controllDot");
+  var controllDots = document.querySelectorAll(".dotContainer .controllDot");
     for(var i = 2; i < 8; i++){
     
       controllDots[i-2].addEventListener('click',(function (i) {
@@ -155,6 +155,33 @@ function start(){ //Start settings
           };
         }(i)));
   }
+    
+  var dotContainer = document.querySelectorAll(".dotContainer");
+    for(var i = 1; i < 7; i++){
+    
+      dotContainer[i-1].addEventListener('mouseenter',(function (i) {
+          return function () {
+            showMAdnotation(i);
+          };
+        }(i)));
+        
+        dotContainer[i-1].addEventListener('mouseleave',(function (i) {
+          return function () {
+            hideMAdnotation(i);
+          };
+        }(i)));
+  }
+    
+  function showMAdnotation(elem){
+      var dot = ".dotContainer:nth-of-type(" + elem + ") p";
+      console.log(elem);
+      document.querySelector(dot).style = "height: 32px; width: auto;";
+  } 
+  function hideMAdnotation(elem){
+      var dot = ".dotContainer:nth-of-type(" + elem + ") p";
+      console.log(elem);
+      document.querySelector(dot).style = "height: 0; width: 0;";
+  }    
     
   function buttonMenu(nr){
 

@@ -18,7 +18,7 @@ body{
 }
 
 .dotActive{
-  background-color: red;
+  background-color: black;
 }
 .dotInactive{
   background-color: white;
@@ -30,16 +30,34 @@ body{
   @include centerh;
   z-index: 99;
 
-  .controllDot{
-    border-radius: 100%;
-    position: relative;
-    opacity: 1;
-    margin: 10px;
-    width: 12px;
-    height: 12px;
-    box-shadow: 0px 0px 10px black;
-    cursor: pointer;
-  }
+    .dotContainer{
+        //width: 182px;
+        height: 32px;
+        
+        .controllDot{
+            border-radius: 100%;
+            position: relative;
+            opacity: 1;
+            margin: 10px;
+            width: 12px;
+            height: 12px;
+            box-shadow: 0px 0px 7px black;
+            cursor: pointer;
+            position: relative;
+            float: right;
+        }
+        
+        p{
+            position: relative;
+            width: 0px;
+            height: 0;
+            font-size: 13px;
+            line-height: 32px;
+            float: right;
+            transition: height 0.3s;
+            overflow-y: hidden;
+        }
+    }
 }
 
 
@@ -96,14 +114,15 @@ body{
             @include centerh;
 
             .logo{
-              height: 100px;
+                height: 60px;
+                margin-top: 10px;
             }
 
             h1{
                 font-size: 50px;
             }
             p{
-                font-size: 30px;
+                font-size: 28px;
             }
         }
     }
@@ -228,7 +247,7 @@ body{
         float: left;
         position: relative;
         width: 33.3333%;
-        .img{
+        img{
             width: 30px;
             
         }
