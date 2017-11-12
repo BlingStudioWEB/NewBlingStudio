@@ -218,15 +218,22 @@ body{
 
 #fourth{
     z-index: 5;
-.icon {
-    img{
-     width: 80px;
-     margin-right: 600px;
-     margin-left: 10px;
-
+  .iconsgrid{
+            width: 95%;
+            margin-left: 2,5%;
+            margin-right: 2,5%;      
     
-    
+    .icon{
+        
+      float: left;
+      position: absolute;
+        
+        .img{
+            width: 30px;
+            
+        }
     }
+    
 }
 
     
