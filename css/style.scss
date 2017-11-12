@@ -218,19 +218,22 @@ body{
 
 #fourth{
     z-index: 5;
-  .iconsgrid{
-            width: 95%;
-            margin-left: 2,5%;
-            margin-right: 2,5%;      
+   #iconsGrid{
+       position: relative;
+       width: 95% ;
+       margin-left: 2.5%;
+       margin-right: 2.5%;      
     
     .icon{
-        
-      float: left;
-      position: absolute;
-        
+        float: left;
+        position: relative;
+        width: 33.3333%;
         .img{
             width: 30px;
             
+        }
+        p{
+            width: 100%
         }
     }
     
