@@ -1,6 +1,5 @@
 window.onload = startUp();
 window.onload = start();
-var number = 2;
 
 function startUp(){
   var elems = document.querySelectorAll('.holder');
@@ -149,9 +148,12 @@ function start(){ //Start settings
   
   var controllDots = document.querySelectorAll(".controllDot");
     for(var i = 2; i < 8; i++){
-      number = i;
-      controllDots[i-2].addEventListener("click", function(){ buttonMenu(number);});
-      
+    
+      controllDots[i-2].addEventListener('click',(function (i) {
+          return function () {
+            buttonMenu(i);
+          };
+        }(i)));
   }
     
   function buttonMenu(nr){
