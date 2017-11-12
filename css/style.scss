@@ -18,7 +18,7 @@ body{
 }
 
 .dotActive{
-  background-color: red;
+  background-color: black;
 }
 .dotInactive{
   background-color: white;
@@ -30,16 +30,34 @@ body{
   @include centerh;
   z-index: 99;
 
-  .controllDot{
-    border-radius: 100%;
-    position: relative;
-    opacity: 1;
-    margin: 10px;
-    width: 12px;
-    height: 12px;
-    box-shadow: 0px 0px 10px black;
-    cursor: pointer;
-  }
+    .dotContainer{
+        //width: 182px;
+        height: 32px;
+        
+        .controllDot{
+            border-radius: 100%;
+            position: relative;
+            opacity: 1;
+            margin: 10px;
+            width: 12px;
+            height: 12px;
+            box-shadow: 0px 0px 7px black;
+            cursor: pointer;
+            position: relative;
+            float: right;
+        }
+        
+        p{
+            position: relative;
+            width: 0px;
+            height: 0;
+            font-size: 13px;
+            line-height: 32px;
+            float: right;
+            transition: height 0.3s;
+            overflow-y: hidden;
+        }
+    }
 }
 
 
@@ -96,15 +114,20 @@ body{
             @include centerh;
 
             .logo{
+<<<<<<< HEAD
               height: 100px;
               margin-top: 30px;
+=======
+                height: 60px;
+                margin-top: 10px;
+>>>>>>> 9e679f24cefd0571c58db5192ad30134984574d9
             }
 
             h1{
                 font-size: 50px;
             }
             p{
-                font-size: 30px;
+                font-size: 28px;
             }
         }
     }
@@ -237,9 +260,15 @@ body{
         width: 33.3333%;
         margin-top: 30px;
          img{
+<<<<<<< HEAD
              height: 100px;
              margin-top: 20px;
             
+=======
+             height: 300px;
+             margin-top: 30px;
+
+>>>>>>> 9e679f24cefd0571c58db5192ad30134984574d9
         }
         p{
             width: 100%;
