@@ -25,7 +25,7 @@ function startUp(){
   return false;
 }
 
-function start(){
+function start(){ //Start settings
 
   var activePage = 2;
   var isAnimating = false;
