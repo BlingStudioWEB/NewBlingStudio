@@ -638,3 +638,47 @@ body{
         }
     }
 }
+
+
+//RESPONSIVE BY BENZOLINO
+
+@media (max-width:991px){
+    .mobile{
+            overflow-y: visible;
+        #controll{
+            display: none;
+        }
+        .holder{
+            top: auto;
+            position: relative;
+            overflow: hidden;
+            height: 200vh;
+            display: flex;
+            flex-direction: column-reverse;
+            .half{
+                width: 100vw;
+                height: 100vh;
+                float: left;
+            }
+
+            .textSide{
+                position: relative;
+                bottom: 0;
+            }
+            .imgSide{
+                position: relative;
+            }
+            video{
+                width: 100vh;
+                min-height: 100vh
+            }
+        }
+        .holder:nth-last-of-type(odd){
+            flex-direction: column;
+        }
+        #first{
+            height: 100vh; 
+            overflow: hidden;
+        }
+    }
+}
