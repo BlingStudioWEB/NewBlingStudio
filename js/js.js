@@ -1,5 +1,6 @@
 window.onload = startUp();
 window.onload = start();
+window.onload = loader();
 
 function startUp(){
   var elems = document.querySelectorAll('.holder');
@@ -174,15 +175,15 @@ function start(){ //Start settings
     
   function showMAdnotation(elem){
       var p = ".dotContainer:nth-of-type(" + elem + ") p";
-      var dot = ".dotContainer:nth-of-type(" + elem + ") .controllDot";
       document.querySelector(p).style = "height: 32px; width: 200px;";
-      document.querySelector(dot).style = "background-color:gray;";
+
   } 
   function hideMAdnotation(elem){
-      var dot = ".dotContainer:nth-of-type(" + elem + ") .controllDot";
       var p = ".dotContainer:nth-of-type(" + elem + ") p";
       document.querySelector(p).style = "height: 0px; width: 0px;";
-      document.querySelector(dot).style = "background-color:white;";
+      
+
+      
   }    
     
   function buttonMenu(nr){
@@ -200,4 +201,14 @@ function start(){ //Start settings
       }
     }
   } //Gets 'nr' from HTML
+}
+
+function loader(){
+    var wrap = document.querySelector("#loaderWrap");
+    setTimeout(function(){
+    wrap.style.opacity = 0;
+        setTimeout(function(){
+            wrap.style.display = "none";
+        }, 1000);
+    }, 1000);
 }

@@ -13,6 +13,45 @@ body{
     
 }
 
+#loaderWrap{
+    height: 100vh;
+    width: 100vw;
+    z-index: 999998;
+    background-color: white;
+    position: relative;
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.loader {
+    color: black;
+    z-index: 999999;
+    font-family: Consolas, Menlo, Monaco, monospace;
+    font-weight: bold;
+    position: relative;
+    font-size: 30vh;
+    @include center();
+    text-align: center;
+  
+
+  span {
+    display: inline-block;
+    animation: pulse 0.4s alternate infinite ease-in-out;
+
+  }
+  span:nth-child(odd) {
+      animation-delay: 0.4s;
+  }    
+}
+
+@keyframes pulse {
+  to {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+}
+
+
 .before{
   transform: scale(0.8);
 }
@@ -48,9 +87,9 @@ body{
             float: right;
             transition: background-color 0.4s;
         }
-        /*.controllDot:hover{
-            background-color: gray;
-        }*/
+        .controllDot:hover{
+            background-color: gray !important;
+        }
         
         p{
             position: relative;
