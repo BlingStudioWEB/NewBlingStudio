@@ -35,7 +35,7 @@ body{
         }
         #bubbleText{
             float: left;
-            height: 30px;
+            height: 50px;
             padding: 10px;
             background-color: black;
             p{
@@ -46,8 +46,8 @@ body{
         }
         #bubbleClose{
             float: left;
-            height: 30px;
-            width: 30px;
+            height: 50px;
+            width: 50px;
             padding: 10px;
             background-color: black;
             border-left: 1px solid white;
@@ -620,10 +620,10 @@ body{
         #iconsGrid{
             .icon{
                 img{
-                    height:62px;
+                    height:60px;
                 }
                 p{
-                    font-size:16px;
+                    font-size:14px;
                 }
             }
         }
@@ -769,10 +769,10 @@ body{
             }
             #firstTxtHolder{
                 h1{
-                    font-size:35px;
+                    font-size:32px;
                 }
                 h2{
-                    font-size:28px;
+                    font-size:23px;
                 }
             }
         }
@@ -781,10 +781,10 @@ body{
         .textSide{
             .textHolder{
                 h1{
-                    font-size:35px;
+                    font-size:30px;
                 }
                 p{
-                    font-size:24px;
+                    font-size:22px;
                 }
             }
         }
@@ -824,7 +824,6 @@ body{
 @media (max-width:619px){
     #first{
         #firstHolder{
-            width:90%;
             img{
                 height:175px;
             }

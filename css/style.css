@@ -27,7 +27,7 @@ body {
       float: left; }
     #contact #bubble #bubbleText {
       float: left;
-      height: 30px;
+      height: 50px;
       padding: 10px;
       background-color: black; }
       #contact #bubble #bubbleText p {
@@ -36,8 +36,8 @@ body {
         height: 30px; }
     #contact #bubble #bubbleClose {
       float: left;
-      height: 30px;
-      width: 30px;
+      height: 50px;
+      width: 50px;
       padding: 10px;
       background-color: black;
       border-left: 1px solid white; }
@@ -475,9 +475,9 @@ body {
   #fourth .textSide .textHolder h1 {
     font-size: 40px; }
   #fourth #iconsGrid .icon img {
-    height: 62px; }
+    height: 60px; }
   #fourth #iconsGrid .icon p {
-    font-size: 16px; }
+    font-size: 14px; }
 
   #sixth .textSide .textHolder h2 {
     font-size: 36px; }
@@ -535,14 +535,14 @@ body {
   #first #firstHolder img {
     height: 190px; }
   #first #firstHolder #firstTxtHolder h1 {
-    font-size: 35px; }
+    font-size: 32px; }
   #first #firstHolder #firstTxtHolder h2 {
-    font-size: 28px; }
+    font-size: 23px; }
 
   .holder .textSide .textHolder h1 {
-    font-size: 35px; }
+    font-size: 30px; }
   .holder .textSide .textHolder p {
-    font-size: 24px; }
+    font-size: 22px; }
 
   #fourth .textSide .textHolder h1 {
     font-size: 28px; }
@@ -556,17 +556,15 @@ body {
   #sixth .textSide .textHolder p {
     font-size: 15px; } }
 @media (max-width: 619px) {
-  #first #firstHolder {
-    width: 90%; }
-    #first #firstHolder img {
-      height: 175px; }
-    #first #firstHolder #firstTxtHolder {
-      top: 50%;
-      transform: translatey(-50%); }
-      #first #firstHolder #firstTxtHolder h1 {
-        font-size: 30px; }
-      #first #firstHolder #firstTxtHolder h2 {
-        font-size: 22px; }
+  #first #firstHolder img {
+    height: 175px; }
+  #first #firstHolder #firstTxtHolder {
+    top: 50%;
+    transform: translatey(-50%); }
+    #first #firstHolder #firstTxtHolder h1 {
+      font-size: 30px; }
+    #first #firstHolder #firstTxtHolder h2 {
+      font-size: 22px; }
 
   .holder .textSide .textHolder h1 {
     font-size: 30px; }
