@@ -281,7 +281,7 @@ body{
 }
 
 .dotActive{
-  background-color: black;
+  background-color: #3281ff;
 }
 .dotInactive{
   background-color: white;
@@ -312,7 +312,7 @@ body{
             transition: background-color 0.4s;
         }
         .controllDot:hover{
-            background-color: gray !important;
+            background-color: rgba(50,129,255,0.1) !important;
         }
         
         p{
