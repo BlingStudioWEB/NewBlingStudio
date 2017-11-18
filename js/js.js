@@ -267,6 +267,7 @@ function contactPageShow(){
     var last = document.querySelector("#contact #contactCircle img:last-of-type");
     var first = document.querySelector("#contact #contactCircle img:first-of-type");
     var bubble = document.querySelector("#contact #bubble");
+    var cSide = document.querySelectorAll("#contactPage .contactSide ");
     bubble.classList.remove('bubbleFadeIn');
     bubble.classList.add('bubbleFadeOut');
     document.querySelector("#contact #contactCircle").classList.remove('shake');
@@ -284,7 +285,15 @@ function contactPageShow(){
     first.classList.add("disp");
     last.classList.remove("disp");
         
-    }, 200);    
+    }, 200);
+    
+    setTimeout(function(){ 
+        for(var i = 0; i<2; i++){
+            cSide[i].classList.remove('opacityInv'); 
+            cSide[i].classList.add('opacityVis'); 
+        }
+    
+    }, 600);  
     
     document.querySelector("#contactPage").classList.remove('contactPageHide');
     document.querySelector("#contactPage").classList.add('contactPageShow');
@@ -294,8 +303,13 @@ function contactPageShow(){
 function contactPageHide(){
     var last = document.querySelector("#contact #contactCircle img:last-of-type");
     var first = document.querySelector("#contact #contactCircle img:first-of-type");
-    
+    var cSide = document.querySelectorAll("#contactPage .contactSide ");
 
+    
+    for(var i = 0; i<2; i++){
+        cSide[i].classList.remove('opacityVis'); 
+        cSide[i].classList.add('opacityInv'); 
+    }
     
     setTimeout(function(){ 
     
@@ -308,8 +322,11 @@ function contactPageHide(){
     first.classList.remove("disp");
                           
     }, 200);  
-    
-    document.querySelector("#contactPage").classList.remove('contactPageShow');
-    document.querySelector("#contactPage").classList.add('contactPageHide');
-    document.querySelector("#contact #contactCircle").onclick = contactPageShow;
+
+
+    setTimeout(function(){ 
+        document.querySelector("#contactPage").classList.remove('contactPageShow');
+        document.querySelector("#contactPage").classList.add('contactPageHide');
+        document.querySelector("#contact #contactCircle").onclick = contactPageShow;
+    }, 600);    
 }

@@ -13,9 +13,11 @@
       –––––––––––––––––––––––––––––––––––––––––––––––––– -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-        <link rel="stylesheet" href="css/style.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&amp;subset=latin-ext" rel="stylesheet"> <!-- Roboto -->
         <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/5.0.0/normalize.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/form.css">
+        <link rel="stylesheet" href="css/style.css">
 
     </head>
 
@@ -181,9 +183,10 @@
                 <article class="textSide half left">
                     <div class="textHolder">
                         <h1>Kontakt</h1>
+                        <p>Bling Studio Web</p>
                         <p>Telefon: 999 999 999 </p>
                         <p>Mail: kontakt@blingstudio.pl</p>
-                        <h2>Na pewno się dogadamy!</h2>
+                        <p>Na pewno się dogadamy!</p>
                         <img class="logo" src="images/logosdblack.png" alt="Logo Bling Studio Web">
                     </div>
                 </article>
@@ -199,11 +202,152 @@
                 </div>
             </div>
             <div id="contactPage" class="contactPageHide">
-                <div id="contactPageLeft">
+                <div id="contactPageLeft" class="contactSide opacityInv">
                     <h2>Formularz Kontaktowy</h2>
+                    <div class="contactPageContainer">
+                        <form id="ECForm_form">
+
+                            <!-- WELCOME SCREEN -->
+                            <div class="inputBox visible">
+
+                                <p>Ask us a question!</p> <!-- Welcome Message -->
+
+
+
+                                <div class="btn-group">
+                                    <button type="button" id="writeMSG" class="btn btn-primary nextInputBox">Ask...</button>
+                                </div>
+
+                            </div>
+
+
+                            <!-- PERSONAL INFO SCREEN -->
+                           <div class="inputBox invisible">
+
+                              <p>Tell us about yourself...</p>
+
+                              <div class="alert alert-danger CFhidden" id="formCompleteFirst" role="alert">
+
+                                  <strong>Fill all fields</strong> <!-- "Fill all fields" Alert -->
+
+                              </div>
+
+
+
+                               <div class="input-group">
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
+                                    <input type="text" id="name" class="form-control" placeholder="Name" aria-describedby="basic-addon1"> <!-- Here you write name  -->
+                               </div>
+
+                               <div class="input-group">
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
+                                    <input type="text" id="surname" class="form-control" placeholder="Surname" aria-describedby="basic-addon1"> <!-- Here you write surname  -->
+                               </div>
+
+
+
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-primary prevInputBox">    <span class="glyphicon glyphicon-backward" aria-hidden="true"></span>    </button>
+                                    <button type="button" id="firstCheck" class="btn btn-primary nextInputBox">    <span class="glyphicon glyphicon-forward" aria-hidden="true">    </span></button>
+                                </div>
+
+                          </div>
+
+
+                          <!-- CONTACT INFO SCREEN -->
+                           <div class="inputBox invisible">
+
+                                <p>How can we contact you?</p>
+
+                                <div class="alert alert-danger CFhidden" id="formCompleteSecond" role="alert">
+                                    <strong>Fill all fields</strong> <!-- "Fill all fields" Alert -->
+                                </div>
+
+                                <div class="alert alert-danger CFhidden" id="emailWrong" role="alert">
+                                    <strong>Wrong Email</strong>  <!-- "Wrong Email" Alert -->
+                                </div>
+
+
+
+                               <div class="input-group">
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span></span>
+                                    <input type="number" id="phone" min="1" class="form-control" placeholder="Phone number" aria-describedby="basic-addon1"> <!-- Here you write phone  -->
+                                </div>
+
+                                <div class="input-group">
+                                    <span class="input-group-addon">@</span>
+                                    <input type="email" id="email" class="form-control" placeholder="Email" aria-describedby="basic-addon1"> <!-- Here you write email  -->
+                                </div>
+
+
+
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-primary prevInputBox">    <span class="glyphicon glyphicon-backward" aria-hidden="true"></span>    </button>
+                                    <button type="button" id="secondCheck" class="btn btn-primary nextInputBox">    <span class="glyphicon glyphicon-forward" aria-hidden="true">    </span></button>
+                                </div>
+
+                          </div>
+
+
+                           <!-- PERSONAL INFO SCREEN -->
+                           <div class="inputBox invisible">
+
+                               <p>Write message</p>
+
+                               <div class="alert alert-danger CFhidden" id="formCompleteThird" role="alert">
+                                  <strong>Fill all fields</strong> <!-- "Fill all fields" Alert -->
+                               </div>
+                               <div class="alert alert-danger CFhidden" id="FillCaptcha" role="alert">
+                                  <strong>Fill Captcha</strong> <!-- "Fill captcha" Alert -->
+                               </div>
+
+
+
+                                <div class="input-group">
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></span>
+                                    <textarea placeholder="Message" id="message" class="form-control" rows="6"></textarea> <!-- Here you write message  -->
+                                </div>
+
+                                <div class="input-group">
+
+                                    <div class="g-recaptcha" data-sitekey="6LeQdycUAAAAADIvguhfInlKMsdd6EVYQpGQzyrx"></div> <!-- PUT SITE KEY HERE -->
+
+                                </div>
+
+                                <div class="btn-group">
+                                    <button type="button" id="submit" class="btn btn-primary">Send</button> <!-- Send Button  -->
+
+                                </div>
+
+                           </div>
+
+
+                           <!-- OUTPUT INFO -->
+                           <div class="inputBox invisible">
+
+                               <div class="alert alert-danger CFhidden" id="msgFailed" role="alert">
+                                  <strong>Oh snap! Something went rather wrong...</strong> <!-- 'Failed sending' Message  -->
+                               </div>
+
+                               <div class="alert alert-success CFhidden" id="msgSent" role="alert">
+                                   <strong>Wow! It works!</strong> <!-- 'Success' Message  -->
+                               </div>
+
+
+                           </div>
+
+                    </form>
+                    </div>
                 </div>
-                <div id="contactPageRight">
+                <div id="contactPageRight" class="contactSide opacityInv">
                     <h2>Dane Kontaktowe</h2>
+                    <div class="contactPageContainer">
+                        <p>Bling Studio Web</p>
+                        <p>Telefon: 999 999 999 </p>
+                        <p>Mail: kontakt@blingstudio.pl</p>
+                        <p>Na pewno się dogadamy!</p>
+                        <img class="logo" src="images/logosd.png" alt="Logo Bling Studio Web">
+                    </div>
                 </div>
             </div>
             <div id="contact">
@@ -224,5 +368,7 @@
 
     </body>
     <script type="text/javascript" src="js/js.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script src="validate.js" type="text/javascript"></script>
 
 </html>
