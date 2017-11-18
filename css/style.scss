@@ -381,7 +381,7 @@ body{
         position: absolute;
 
         .textHolder{
-            width: 90%;
+            width: 100%;
             padding: 0 5% 0 5%;
             text-align: center;
             position: relative;
@@ -526,10 +526,10 @@ body{
 
   #iconsGrid{
        position: relative;
-       width: 95% ;
-       margin-left: 2.5%;
-       margin-right: 2.5%;  
-       height: 10px;
+       width: 100%;
+       padding-left: 2.5%;
+       padding-right: 2.5%;  
+       //height: 10px;
        margin-top: -40px;
       
        
