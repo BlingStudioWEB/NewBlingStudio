@@ -472,6 +472,7 @@ body{
         width: auto;
         @include center;
         z-index: 1;
+        filter: saturate(120%);
     }
 
     #firstHolder{
