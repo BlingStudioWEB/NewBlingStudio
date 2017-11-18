@@ -2,8 +2,8 @@
 @import "../bourbon/bourbon";
 
 *{
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 body{
@@ -11,6 +11,230 @@ body{
     font-family: 'Roboto', sans-serif;
     background-color: #d7d0d0;
     
+}
+
+#contact{
+    z-index: 9999;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    height: 75px;
+    
+    #bubble{
+        position: fixed;
+        left: 95px;
+        height: 50px;
+        bottom: 22.5px;
+        #bubbleTriangle{
+            width: 0; 
+            height: 0; 
+            border-top: 25px solid transparent;
+            border-bottom: 25px solid transparent; 
+            border-right:25px solid black; 
+            float: left;
+        }
+        #bubbleText{
+            float: left;
+            height: 30px;
+            padding: 10px;
+            background-color: black;
+            p{
+                line-height: 30px;
+                color: white;
+                height: 30px;
+            }
+        }
+        #bubbleClose{
+            float: left;
+            height: 30px;
+            width: 30px;
+            padding: 10px;
+            background-color: black;
+            border-left: 1px solid white;
+            img{
+                height: 30px;
+                width: 30px;
+                position: relative;
+                @include center;
+                transition: height 0.2s, width 0.2s;
+                
+            }
+        }
+        #bubbleClose:after{
+            content: '';
+            clear: both;
+        }
+        
+        #bubbleClose:hover{
+            img{
+                height: 25px;
+                width: 25px;
+            }
+        }
+    }
+    
+    #contactCircle{
+        height: 75px;
+        width: 75px;
+        border-radius: 75px;
+        background-color: #ff8d02;
+        display: -webkit-box;  
+        display: -ms-flexbox;  
+        display: -webkit-flex; 
+        display: flex;         
+
+        justify-content: center;
+        align-items: center;
+        
+        img{
+            height: 36px;
+            width: 36px;
+            position: relative;
+            transition: height 0.2s, width 0.2s;
+        }
+        
+        .visible{
+            transform: scale(1);
+            @keyframes scaleIn {
+            0%{transform: scale(0);}
+            80%{transform: scale(1.1);}
+            100%{transform: scale(1);}
+            }
+            animation: scaleIn 0.4s ease-in-out;
+        }
+        
+        .invisible{
+            transform: scale(0);
+            @keyframes scaleOut {
+            0%{transform: scale(1);}
+            80%{transform: scale(1.1);}
+            100%{transform: scale(0);}
+            }
+            animation: scaleOut 0.4s ease-in-out;
+        }
+        
+        .disp{
+           display: none; 
+        }
+    }
+}
+
+#contact:hover{
+    #contactCircle{
+        img{
+            height: 30px;
+            width: 30px;
+        }
+    }
+}
+
+.bubbleFadeIn{
+    transform: scale(1);
+    @keyframes scaleIn {
+    0%{transform: scale(0);}
+    80%{transform: scale(1.1);}
+    100%{transform: scale(1);}
+    }
+    animation: scaleIn 0.4s ease-in-out;
+}
+
+.bubbleFadeOut{
+    transform: scale(0);
+    @keyframes scaleOut {
+    0%{transform: scale(1);}
+    80%{transform: scale(1.1);}
+    100%{transform: scale(0);}
+    }
+    animation: scaleOut 0.4s ease-in-out;
+}
+
+.shake{
+        @keyframes shake{
+        0% { transform: rotate(0deg); }
+        35% { transform: rotate(0deg); }
+       55% { transform: rotate(35deg); }
+       75% { transform: rotate(-35deg); }
+      100% { transform: rotate(0deg); }
+    }
+    animation: shake 1s infinite;
+}
+
+.contactPageShow{
+    transform: scale(1);
+    @keyframes contactPageShow{
+        0% { transform: scale(0); border-radius: 0 100% 0 0;}
+        80% { transform: scale(1); border-radius: 0 100% 0 0;}
+      100% { transform: scale(1); border-radius: 0%;}
+    }
+    animation: contactPageShow 0.4s linear;
+}
+.contactPageHide{
+    transform: scale(0);
+    @keyframes contactPageHide{
+        0% { transform: scale(1); border-radius:0;}
+        20% { transform: scale(1); border-radius: 0 100% 0 0;}
+      100% { transform: scale(0); border-radius: 0 100% 0 0;}
+    }
+    animation: contactPageHide 0.4s linear;
+}
+
+#contactPage{
+    height: 100vh;
+    width: 100vw;
+    padding: 5vh 5vw 5vh 5vw;
+    position: fixed;
+    background-color: black;
+    z-index: 9998;
+    left: 0;
+    bottom: 0;
+    transform-origin: bottom left;
+    color: white;
+    overflow: hidden;
+    #contactPageLeft, #contactPageRight{
+        width: 50%;
+        height: 100%;
+        float: left;
+        position: relative;
+        transition: opacity 0.6s ease-in;
+        h2{
+            width: 100%;
+            text-align: center;
+            font-size: 35px;
+            line-height: 40px;
+            height: 40px;
+            padding: 5px 0 5px 0;
+        }
+    }
+    #contactPageLeft{
+        border-right: 1px solid white;
+    }
+    #contactPageRight:after{
+        content: '';
+        clear: both;
+    }
+    #contactPageRight{
+        text-align: center;
+        .contactPageContainer{
+        position: relative;
+        @include centerh;    
+            p{
+                width: 100%;
+                font-size: 35px;
+            }
+            .logo{
+                  height: 60px;
+                  margin-top: 20px;
+            }
+        }
+    }
+    
+     .opacityInv{
+        opacity: 0;
+    }
+    
+    .opacityVis{
+        opacity: 1;
+    }
 }
 
 #loaderWrap{
@@ -191,6 +415,11 @@ body{
             @include center;
             height: auto;
             width: auto;
+            filter: contrast(120%);
+            -webkit-filter: contrast(120%);
+            -moz-filter: contrast(120%);
+            -o-filter: contrast(120%);
+            -ms-filter: contrast(120%);
         }
     }
 
@@ -356,14 +585,14 @@ body{
     #first{
         #firstHolder{
             img{
-                height:600px;
+                height:235px;
             }
             #firstTxtHolder{
                 h1{
-                    font-size:55px;
+                    font-size:50px;
                 }
                 h2{
-                    font-size:48px;
+                    font-size:42px;
                 }
             }
         }
@@ -415,6 +644,9 @@ body{
 @media (min-width:992px) and (max-width:1199px){
     #first{
         #firstHolder{
+            img{
+                height:220px;
+            }
             #firstTxtHolder{
                 h1{
                     font-size:44px;
@@ -469,9 +701,12 @@ body{
         }
     }
 }
-@media (min-width:768px) and (max-width:991px){
+@media (max-width:991px){
     #first{
         #firstHolder{
+            img{
+                height:205px;
+            }
             #firstTxtHolder{
                 h1{
                     font-size:39px;
@@ -529,6 +764,9 @@ body{
 @media (min-width:620px) and (max-width:767px){
     #first{
         #firstHolder{
+            img{
+                height:190px;
+            }
             #firstTxtHolder{
                 h1{
                     font-size:35px;
@@ -543,10 +781,10 @@ body{
         .textSide{
             .textHolder{
                 h1{
-                    font-size:28px;
+                    font-size:35px;
                 }
                 p{
-                    font-size:13px;
+                    font-size:24px;
                 }
             }
         }
@@ -586,7 +824,12 @@ body{
 @media (max-width:619px){
     #first{
         #firstHolder{
+            width:90%;
+            img{
+                height:175px;
+            }
             #firstTxtHolder{
+                @include centerh;
                 h1{
                     font-size:30px;
                 }
@@ -600,10 +843,10 @@ body{
         .textSide{
             .textHolder{
                 h1{
-                    font-size:28px;
+                    font-size:30px;
                 }
                 p{
-                    font-size:10px;
+                    font-size:22px;
                 }
             }
         }
@@ -612,7 +855,7 @@ body{
         .textSide{
             .textHolder{
                 h1{
-                    font-size:22px;
+                    font-size:35px;
                 }
             }
         }
@@ -622,7 +865,7 @@ body{
                     height:42px;
                 }
                 p{
-                    font-size:8.5px;
+                    font-size:12px;
                 }
             }
         }
@@ -631,12 +874,59 @@ body{
         .textSide{
             .textHolder{
                 h2{
-                    font-size:18px;
+                    font-size:30px;
                 }
                 p{
-                    font-size:11px;
+                    font-size:22px;
                 }
             }
+        }
+    }
+}
+
+
+//RESPONSIVE BY BENZOLINO
+
+@media (max-width:991px){
+    .mobile{
+            overflow-y: visible;
+        #controll{
+            display: none;
+        }
+        .holder{
+            top: auto;
+            position: relative;
+            overflow: hidden;
+            height: 200vh;
+            display: flex;
+            flex-direction: column-reverse;
+            .half{
+                width: 100vw;
+                height: 100vh;
+                float: left;
+            }
+
+            .textSide{
+                position: relative;
+                bottom: 0;
+                .textHolder{
+                    margin:auto;
+                }
+            }
+            .imgSide{
+                position: relative;
+            }
+            video{
+                width: 100vh;
+                min-height: 100vh
+            }
+        }
+        .holder:nth-last-of-type(odd){
+            flex-direction: column;
+        }
+        #first{
+            height: 100vh; 
+            overflow: hidden;
         }
     }
 }

@@ -7,6 +7,203 @@ body {
   font-family: 'Roboto', sans-serif;
   background-color: #d7d0d0; }
 
+#contact {
+  z-index: 9999;
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  height: 75px; }
+  #contact #bubble {
+    position: fixed;
+    left: 95px;
+    height: 50px;
+    bottom: 22.5px; }
+    #contact #bubble #bubbleTriangle {
+      width: 0;
+      height: 0;
+      border-top: 25px solid transparent;
+      border-bottom: 25px solid transparent;
+      border-right: 25px solid black;
+      float: left; }
+    #contact #bubble #bubbleText {
+      float: left;
+      height: 30px;
+      padding: 10px;
+      background-color: black; }
+      #contact #bubble #bubbleText p {
+        line-height: 30px;
+        color: white;
+        height: 30px; }
+    #contact #bubble #bubbleClose {
+      float: left;
+      height: 30px;
+      width: 30px;
+      padding: 10px;
+      background-color: black;
+      border-left: 1px solid white; }
+      #contact #bubble #bubbleClose img {
+        height: 30px;
+        width: 30px;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: height 0.2s, width 0.2s; }
+    #contact #bubble #bubbleClose:after {
+      content: '';
+      clear: both; }
+    #contact #bubble #bubbleClose:hover img {
+      height: 25px;
+      width: 25px; }
+  #contact #contactCircle {
+    height: 75px;
+    width: 75px;
+    border-radius: 75px;
+    background-color: #ff8d02;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    #contact #contactCircle img {
+      height: 36px;
+      width: 36px;
+      position: relative;
+      transition: height 0.2s, width 0.2s; }
+    #contact #contactCircle .visible {
+      transform: scale(1);
+      animation: scaleIn 0.4s ease-in-out; }
+@keyframes scaleIn {
+  0% {
+    transform: scale(0); }
+  80% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(1); } }
+    #contact #contactCircle .invisible {
+      transform: scale(0);
+      animation: scaleOut 0.4s ease-in-out; }
+@keyframes scaleOut {
+  0% {
+    transform: scale(1); }
+  80% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(0); } }
+    #contact #contactCircle .disp {
+      display: none; }
+
+#contact:hover #contactCircle img {
+  height: 30px;
+  width: 30px; }
+
+.bubbleFadeIn {
+  transform: scale(1);
+  animation: scaleIn 0.4s ease-in-out; }
+@keyframes scaleIn {
+  0% {
+    transform: scale(0); }
+  80% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(1); } }
+.bubbleFadeOut {
+  transform: scale(0);
+  animation: scaleOut 0.4s ease-in-out; }
+@keyframes scaleOut {
+  0% {
+    transform: scale(1); }
+  80% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(0); } }
+.shake {
+  animation: shake 1s infinite; }
+@keyframes shake {
+  0% {
+    transform: rotate(0deg); }
+  35% {
+    transform: rotate(0deg); }
+  55% {
+    transform: rotate(35deg); }
+  75% {
+    transform: rotate(-35deg); }
+  100% {
+    transform: rotate(0deg); } }
+.contactPageShow {
+  transform: scale(1);
+  animation: contactPageShow 0.4s linear; }
+@keyframes contactPageShow {
+  0% {
+    transform: scale(0);
+    border-radius: 0 100% 0 0; }
+  80% {
+    transform: scale(1);
+    border-radius: 0 100% 0 0; }
+  100% {
+    transform: scale(1);
+    border-radius: 0%; } }
+.contactPageHide {
+  transform: scale(0);
+  animation: contactPageHide 0.4s linear; }
+@keyframes contactPageHide {
+  0% {
+    transform: scale(1);
+    border-radius: 0; }
+  20% {
+    transform: scale(1);
+    border-radius: 0 100% 0 0; }
+  100% {
+    transform: scale(0);
+    border-radius: 0 100% 0 0; } }
+#contactPage {
+  height: 100vh;
+  width: 100vw;
+  padding: 5vh 5vw 5vh 5vw;
+  position: fixed;
+  background-color: black;
+  z-index: 9998;
+  left: 0;
+  bottom: 0;
+  transform-origin: bottom left;
+  color: white;
+  overflow: hidden; }
+  #contactPage #contactPageLeft, #contactPage #contactPageRight {
+    width: 50%;
+    height: 100%;
+    float: left;
+    position: relative;
+    transition: opacity 0.6s ease-in; }
+    #contactPage #contactPageLeft h2, #contactPage #contactPageRight h2 {
+      width: 100%;
+      text-align: center;
+      font-size: 35px;
+      line-height: 40px;
+      height: 40px;
+      padding: 5px 0 5px 0; }
+  #contactPage #contactPageLeft {
+    border-right: 1px solid white; }
+  #contactPage #contactPageRight:after {
+    content: '';
+    clear: both; }
+  #contactPage #contactPageRight {
+    text-align: center; }
+    #contactPage #contactPageRight .contactPageContainer {
+      position: relative;
+      top: 50%;
+      transform: translatey(-50%); }
+      #contactPage #contactPageRight .contactPageContainer p {
+        width: 100%;
+        font-size: 35px; }
+      #contactPage #contactPageRight .contactPageContainer .logo {
+        height: 60px;
+        margin-top: 20px; }
+  #contactPage .opacityInv {
+    opacity: 0; }
+  #contactPage .opacityVis {
+    opacity: 1; }
+
 #loaderWrap {
   height: 100vh;
   width: 100vw;
@@ -138,7 +335,12 @@ body {
       top: 50%;
       transform: translate(-50%, -50%);
       height: auto;
-      width: auto; }
+      width: auto;
+      filter: contrast(120%);
+      -webkit-filter: contrast(120%);
+      -moz-filter: contrast(120%);
+      -o-filter: contrast(120%);
+      -ms-filter: contrast(120%); }
 
 #first .scroll-downs {
   position: absolute;
@@ -259,11 +461,11 @@ body {
 
 @media (min-width: 1200px) and (max-width: 1559px) {
   #first #firstHolder img {
-    height: 600px; }
+    height: 235px; }
   #first #firstHolder #firstTxtHolder h1 {
-    font-size: 55px; }
+    font-size: 50px; }
   #first #firstHolder #firstTxtHolder h2 {
-    font-size: 48px; }
+    font-size: 42px; }
 
   .holder .textSide .textHolder h1 {
     font-size: 43px; }
@@ -282,6 +484,8 @@ body {
   #sixth .textSide .textHolder p {
     font-size: 30px; } }
 @media (min-width: 992px) and (max-width: 1199px) {
+  #first #firstHolder img {
+    height: 220px; }
   #first #firstHolder #firstTxtHolder h1 {
     font-size: 44px; }
   #first #firstHolder #firstTxtHolder h2 {
@@ -303,7 +507,9 @@ body {
     font-size: 31px; }
   #sixth .textSide .textHolder p {
     font-size: 25px; } }
-@media (min-width: 768px) and (max-width: 991px) {
+@media (max-width: 991px) {
+  #first #firstHolder img {
+    height: 205px; }
   #first #firstHolder #firstTxtHolder h1 {
     font-size: 39px; }
   #first #firstHolder #firstTxtHolder h2 {
@@ -326,15 +532,17 @@ body {
   #sixth .textSide .textHolder p {
     font-size: 20px; } }
 @media (min-width: 620px) and (max-width: 767px) {
+  #first #firstHolder img {
+    height: 190px; }
   #first #firstHolder #firstTxtHolder h1 {
     font-size: 35px; }
   #first #firstHolder #firstTxtHolder h2 {
     font-size: 28px; }
 
   .holder .textSide .textHolder h1 {
-    font-size: 28px; }
+    font-size: 35px; }
   .holder .textSide .textHolder p {
-    font-size: 13px; }
+    font-size: 24px; }
 
   #fourth .textSide .textHolder h1 {
     font-size: 28px; }
@@ -348,26 +556,64 @@ body {
   #sixth .textSide .textHolder p {
     font-size: 15px; } }
 @media (max-width: 619px) {
-  #first #firstHolder #firstTxtHolder h1 {
-    font-size: 30px; }
-  #first #firstHolder #firstTxtHolder h2 {
-    font-size: 22px; }
+  #first #firstHolder {
+    width: 90%; }
+    #first #firstHolder img {
+      height: 175px; }
+    #first #firstHolder #firstTxtHolder {
+      top: 50%;
+      transform: translatey(-50%); }
+      #first #firstHolder #firstTxtHolder h1 {
+        font-size: 30px; }
+      #first #firstHolder #firstTxtHolder h2 {
+        font-size: 22px; }
 
   .holder .textSide .textHolder h1 {
-    font-size: 28px; }
+    font-size: 30px; }
   .holder .textSide .textHolder p {
-    font-size: 10px; }
+    font-size: 22px; }
 
   #fourth .textSide .textHolder h1 {
-    font-size: 22px; }
+    font-size: 35px; }
   #fourth #iconsGrid .icon img {
     height: 42px; }
   #fourth #iconsGrid .icon p {
-    font-size: 8.5px; }
+    font-size: 12px; }
 
   #sixth .textSide .textHolder h2 {
-    font-size: 18px; }
+    font-size: 30px; }
   #sixth .textSide .textHolder p {
-    font-size: 11px; } }
+    font-size: 22px; } }
+@media (max-width: 991px) {
+  .mobile {
+    overflow-y: visible; }
+    .mobile #controll {
+      display: none; }
+    .mobile .holder {
+      top: auto;
+      position: relative;
+      overflow: hidden;
+      height: 200vh;
+      display: flex;
+      flex-direction: column-reverse; }
+      .mobile .holder .half {
+        width: 100vw;
+        height: 100vh;
+        float: left; }
+      .mobile .holder .textSide {
+        position: relative;
+        bottom: 0; }
+        .mobile .holder .textSide .textHolder {
+          margin: auto; }
+      .mobile .holder .imgSide {
+        position: relative; }
+      .mobile .holder video {
+        width: 100vh;
+        min-height: 100vh; }
+    .mobile .holder:nth-last-of-type(odd) {
+      flex-direction: column; }
+    .mobile #first {
+      height: 100vh;
+      overflow: hidden; } }
 
 /*# sourceMappingURL=style.css.map */
