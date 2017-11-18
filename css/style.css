@@ -310,7 +310,7 @@ body {
     background-color: #e8e1e1;
     position: absolute; }
     .holder .textSide .textHolder {
-      width: 90%;
+      width: 100%;
       padding: 0 5% 0 5%;
       text-align: center;
       position: relative;
@@ -423,10 +423,9 @@ body {
     margin-top: -30px; }
   #fourth #iconsGrid {
     position: relative;
-    width: 95%;
-    margin-left: 2.5%;
-    margin-right: 2.5%;
-    height: 10px;
+    width: 100%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
     margin-top: -40px; }
     #fourth #iconsGrid .icon {
       float: left;
@@ -444,7 +443,7 @@ body {
       #fourth #iconsGrid .icon p {
         width: 100%;
         height: 20%;
-        font-size: 24px;
+        font-size: 23px;
         margin-top: 20px; }
 
 #fifth {
@@ -468,9 +467,9 @@ body {
     font-size: 42px; }
 
   .holder .textSide .textHolder h1 {
-    font-size: 43px; }
+    font-size: 45px; }
   .holder .textSide .textHolder p {
-    font-size: 22px; }
+    font-size: 24px; }
 
   #fourth .textSide .textHolder h1 {
     font-size: 40px; }
@@ -480,9 +479,9 @@ body {
     font-size: 14px; }
 
   #sixth .textSide .textHolder h2 {
-    font-size: 36px; }
+    font-size: 47px; }
   #sixth .textSide .textHolder p {
-    font-size: 30px; } }
+    font-size: 26px; } }
 @media (min-width: 992px) and (max-width: 1199px) {
   #first #firstHolder img {
     height: 220px; }
@@ -492,7 +491,7 @@ body {
     font-size: 25px; }
 
   .holder .textSide .textHolder h1 {
-    font-size: 35px; }
+    font-size: 34px; }
   .holder .textSide .textHolder p {
     font-size: 25px; }
 
@@ -504,9 +503,9 @@ body {
     font-size: 13.5px; }
 
   #sixth .textSide .textHolder h2 {
-    font-size: 31px; }
+    font-size: 45px; }
   #sixth .textSide .textHolder p {
-    font-size: 25px; } }
+    font-size: 24px; } }
 @media (max-width: 991px) {
   #first #firstHolder img {
     height: 205px; }
@@ -516,9 +515,9 @@ body {
     font-size: 20px; }
 
   .holder .textSide .textHolder h1 {
-    font-size: 32px; }
+    font-size: 33px; }
   .holder .textSide .textHolder p {
-    font-size: 15px; }
+    font-size: 20px; }
 
   #fourth .textSide .textHolder h1 {
     font-size: 38px; }
@@ -528,9 +527,9 @@ body {
     font-size: 11.5px; }
 
   #sixth .textSide .textHolder h2 {
-    font-size: 28px; }
+    font-size: 35px; }
   #sixth .textSide .textHolder p {
-    font-size: 20px; } }
+    font-size: 22px; } }
 @media (min-width: 620px) and (max-width: 767px) {
   #first #firstHolder img {
     height: 190px; }
@@ -540,9 +539,9 @@ body {
     font-size: 23px; }
 
   .holder .textSide .textHolder h1 {
-    font-size: 30px; }
+    font-size: 31px; }
   .holder .textSide .textHolder p {
-    font-size: 22px; }
+    font-size: 20px; }
 
   #fourth .textSide .textHolder h1 {
     font-size: 28px; }
@@ -552,9 +551,9 @@ body {
     font-size: 9.5px; }
 
   #sixth .textSide .textHolder h2 {
-    font-size: 22px; }
+    font-size: 33px; }
   #sixth .textSide .textHolder p {
-    font-size: 15px; } }
+    font-size: 22px; } }
 @media (max-width: 619px) {
   #first #firstHolder img {
     height: 175px; }
@@ -567,9 +566,9 @@ body {
       font-size: 22px; }
 
   .holder .textSide .textHolder h1 {
-    font-size: 30px; }
+    font-size: 27px; }
   .holder .textSide .textHolder p {
-    font-size: 22px; }
+    font-size: 18px; }
 
   #fourth .textSide .textHolder h1 {
     font-size: 35px; }
@@ -579,9 +578,9 @@ body {
     font-size: 12px; }
 
   #sixth .textSide .textHolder h2 {
-    font-size: 30px; }
+    font-size: 29px; }
   #sixth .textSide .textHolder p {
-    font-size: 22px; } }
+    font-size: 20px; } }
 @media (max-width: 991px) {
   .mobile {
     overflow-y: visible; }

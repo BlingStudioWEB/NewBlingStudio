@@ -381,7 +381,7 @@ body{
         position: absolute;
 
         .textHolder{
-            width: 90%;
+            width: 100%;
             padding: 0 5% 0 5%;
             text-align: center;
             position: relative;
@@ -526,10 +526,10 @@ body{
 
   #iconsGrid{
        position: relative;
-       width: 95% ;
-       margin-left: 2.5%;
-       margin-right: 2.5%;  
-       height: 10px;
+       width: 100%;
+       padding-left: 2.5%;
+       padding-right: 2.5%;  
+       //height: 10px;
        margin-top: -40px;
       
        
@@ -556,7 +556,7 @@ body{
         p{
           width: 100%;
           height: 20%;
-          font-size: 24px;
+          font-size: 23px;
           margin-top: 20px;
         }    
        }
@@ -601,10 +601,10 @@ body{
         .textSide{
             .textHolder{
                 h1{
-                    font-size:43px;
+                    font-size:45px;
                 }
                 p{
-                    font-size:22px;
+                    font-size:24px;
                 }
             }
         }
@@ -632,10 +632,10 @@ body{
         .textSide{
             .textHolder{
                 h2{
-                    font-size:36px;
+                    font-size:47px;
                 }
                 p{
-                    font-size:30px;
+                    font-size:26px;
                 }
             }
         }
@@ -661,7 +661,7 @@ body{
         .textSide{
             .textHolder{
                 h1{
-                    font-size:35px;
+                    font-size:34px;
                 }
                 p{
                     font-size:25px;
@@ -692,10 +692,10 @@ body{
         .textSide{
             .textHolder{
                 h2{
-                    font-size:31px;
+                    font-size:45px;
                 }
                 p{
-                    font-size:25px;
+                    font-size:24px;
                 }
             }
         }
@@ -721,10 +721,10 @@ body{
         .textSide{
             .textHolder{
                 h1{
-                    font-size:32px;
+                    font-size:33px;
                 }
                 p{
-                    font-size:15px;
+                    font-size:20px;
                 }
             }
         }
@@ -752,10 +752,10 @@ body{
         .textSide{
             .textHolder{
                 h2{
-                    font-size:28px;
+                    font-size:35px;
                 }
                 p{
-                    font-size:20px;
+                    font-size:22px;
                 }
             }
         }
@@ -781,10 +781,10 @@ body{
         .textSide{
             .textHolder{
                 h1{
-                    font-size:30px;
+                    font-size:31px;
                 }
                 p{
-                    font-size:22px;
+                    font-size:20px;
                 }
             }
         }
@@ -812,10 +812,10 @@ body{
         .textSide{
             .textHolder{
                 h2{
-                    font-size:22px;
+                    font-size:33px;
                 }
                 p{
-                    font-size:15px;
+                    font-size:22px;
                 }
             }
         }
@@ -842,10 +842,10 @@ body{
         .textSide{
             .textHolder{
                 h1{
-                    font-size:30px;
+                    font-size:27px;
                 }
                 p{
-                    font-size:22px;
+                    font-size:18px;
                 }
             }
         }
@@ -873,10 +873,10 @@ body{
         .textSide{
             .textHolder{
                 h2{
-                    font-size:30px;
+                    font-size:29px;
                 }
                 p{
-                    font-size:22px;
+                    font-size:20px;
                 }
             }
         }
