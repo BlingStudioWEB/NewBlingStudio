@@ -581,6 +581,9 @@ body{
         
 }
 //responsiveness
+@media (min-width:1921px;){
+    
+}
 @media (min-width:1200px) and (max-width:1559px){
     #first{
         #firstHolder{
@@ -592,7 +595,7 @@ body{
                     font-size:50px;
                 }
                 h2{
-                    font-size:42px;
+                    font-size:40px;
                 }
             }
         }
