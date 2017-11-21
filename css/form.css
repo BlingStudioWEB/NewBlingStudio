@@ -26,12 +26,18 @@
     margin: 20px 0 20px 0;
     text-align: center;
 }
+#ECForm_form .inputBox:first-of-type p:last-of-type{
+    font-size: 22px;
+}
 
 #ECForm_form .btn-group{
     transform: translate(-50%, 0);
     left: 50%;
     position: relative;
     padding: 10px 0 10px 0;
+}
+#ECForm_form .btn-group button{
+    background-color: #3281ff;
 }
 
 #ECForm_form .input-group{
