@@ -281,7 +281,7 @@ body{
 }
 
 .dotActive{
-  background-color: black;
+  background-color: #3281ff;
 }
 .dotInactive{
   background-color: white;
@@ -312,7 +312,7 @@ body{
             transition: background-color 0.4s;
         }
         .controllDot:hover{
-            background-color: gray !important;
+            background-color: rgba(50,129,255,0.1) !important;
         }
         
         p{
@@ -478,34 +478,28 @@ body{
         position: absolute;
         @include center;
         z-index: 2;
-        display: flex;
-        height: 300px;
-
+        width: 700px;
+        color: white;
+        text-align: center;
+        width: 80%;
+        
         img{
-            height: 300px;
-            position: relative;
+            height: 80px;
+            margin-bottom: 5px;
+        }
+        
+        h1{
+            font-size: 70px;
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+        h2{
+            font-size: 25px;
+            margin-bottom: 5px;
         }
 
-        #firstTxtHolder{
-            display: flex;
-            position: relative;
-            flex-direction: column;
-            margin-left: 20px;
-            color: white;
-            text-shadow: 0px 0px 10px black;
-            font-weight: 300;
-            text-align: center;
-            //height: 300px;
-            h1{
-                font-size: 70px;
-                //max-height: 150px;
-            }
-            h2{
-                font-size: 55px;
-                //max-height: 150px;
-            }
-        }
     }
+    
 }
 
 #second{
